@@ -6,9 +6,9 @@ import java.util.List;
 public class C01_Iterator {
     public static void main(String[] args) {
 
-    //JAva collections icerisindeki bazi class'lar index desteklemez
+        //JAva collections icerisindeki bazi class'lar index desteklemez
         //bu durumda index kullanmadan collection icerisindeki tum elementlere ulasabilmek
-        //  ve onlari update edebilmek icin farkli ihtiyaclarimiz olur
+        // ve onlari update edebilmek icin farkli ihtiyaclarimiz olur
 
 
         //List<> index yapisini destekledigi icin, boyle bir ihtiyac duymaz
