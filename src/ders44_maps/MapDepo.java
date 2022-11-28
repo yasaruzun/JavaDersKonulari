@@ -150,4 +150,90 @@ public class MapDepo {
 
 
     }
+
+    public static Set<String> siraliOgrenciListesiOlustur(Map<Integer, String> ogrenciMap) {
+
+        Set<String>siraliOgrenciSeti=new TreeSet<>();
+
+        //tum elementlerin key ve value'lerine birlikte ihtiac oldugundan entry kullanmaliyiz
+
+        Set<Map.Entry<Integer,String>> ogrenciEntrySeti=ogrenciMap.entrySet();
+
+        //her bir entry'i elden gecirip, bilgileri istedigimiz formatta alalim
+
+
+        String istenenBilgi;
+        String value;
+        String[] valueArr;
+
+        for (Map.Entry<Integer,String> eachEntry:ogrenciEntrySeti
+             ) {
+            //101=Ali-Can-10-H-MF- Entry
+            // bolum,sinif, sube,isim, soyisim ve numara'larini yazdirin
+
+            value=eachEntry.getValue();
+
+            valueArr=value.split("-");//[Ali,Can,10,H,MF]
+
+            istenenBilgi=valueArr[4]+", "+
+                         valueArr[2]+", "+
+                         valueArr[3]+", "+
+                         valueArr[0]+" "+
+                         valueArr[1]+", "+
+                         eachEntry.getKey();
+
+            siraliOgrenciSeti.add(istenenBilgi);
+
+
+            //map'de herhangi bir degisiklik istenmediginden
+            //array'i yeniden birlestirip entry.setValue() yapmamiza gerek yok
+        }
+
+
+
+
+
+
+        return siraliOgrenciSeti;
+    }
+
+
+    public static Map<Integer, String> soyIsimleriBuyukHarfYap(Map<Integer, String> ogrenciMap) {
+
+        //soyisimleri buyutmek icin once EntrySet alalim
+        //entrySet'deki her bir entry'deki value alalim
+        //value'yu split yapip, arraya cevirelim
+        //array'de istedigimiz degisikligi yapalim
+        //array'deki yeni bilgileri birlestirip eachEntry'deki SetValue deyip yeni degeri yazalim
+
+
+        String value;
+        String []valueArr;
+
+
+        Set<Map.Entry<Integer,String>> ogrenciEntrySeti= ogrenciMap.entrySet();
+
+        for (Map.Entry<Integer,String> eachEntry: ogrenciEntrySeti
+             ) {
+
+            value=eachEntry.getValue();
+            valueArr=value.split("-");
+
+            valueArr[1]=valueArr[1].toUpperCase();
+
+
+            eachEntry.setValue(valueArr[0]+"-"+
+                    valueArr[1]+"-"+
+                    valueArr[2]+"-"+
+                    valueArr[3]+"-"+
+                    valueArr[4]);
+
+        }
+
+
+
+
+
+        return ogrenciMap;
+    }
 }
