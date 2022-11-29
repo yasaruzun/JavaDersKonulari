@@ -8,20 +8,12 @@ import java.util.Set;
 public class C01_EntrySet {
     public static void main(String[] args) {
 
-
-        /*
-            ogrenci map'inde sirali olarak
-            tum ogrencilerin
-            bolum,sinif, sube,isim, soyisim ve numara'larini yazdirin
-         */
-
-
         //onceki 2 derste key(set) ve value(collection) degerlerini toplu olarak alabliyorduk
         //Ancak key ve value birlikte kullanmak istedigimizde
         //bu islemi yapmak zor olur
 
 
-        // bunun icin Jaca Entry Interface'ini olusturmustur
+        // bunun icin Java Entry Interface'ini olusturmustur
         //Entry'ler key=Value ikilisini 1 Entry olarak kabul ederler
 
 

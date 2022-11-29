@@ -27,12 +27,12 @@ public class C02_Maps {
         //108 numarali ogrencinin isim ve soysimini yazdirin
         System.out.println(MapDepo.isimSoyIsimDondur(ogrenciMap,108));//Hikmet Han
 
-        //104 numarali ogrencinin subesini K yapin
+        //105 numarali ogrencinin subesini K yapin
         //metod'da istenen key map de varsa degistirip map geri dondurelim
         //yoksa hic bir islem yapmadan map i geri dondurelim
 
         int ogrenciKey=105;
-        String yeniSube="N";
+        String yeniSube="K";
         ogrenciMap=MapDepo.ogrenciyeYeniSubeAta(ogrenciMap,ogrenciKey,yeniSube);
 
         System.out.println(ogrenciMap);

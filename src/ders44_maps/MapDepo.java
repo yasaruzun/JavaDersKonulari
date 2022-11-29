@@ -24,9 +24,9 @@ public class MapDepo {
     public static String isimSoyIsimDondur(Map<Integer, String> ogrenciMap, int ogrenciKey) {
 
 
-        String ogrencValue = ogrenciMap.get(ogrenciKey);// 105=Ayse-Cem-11-M-TM,
+        String ogrencValue = ogrenciMap.get(ogrenciKey);// Ayse-Cem-11-M-TM,
 
-        String[] valueArr = ogrencValue.split("-");// [Ayse-Cem-11-M-TM]
+        String[] valueArr = ogrencValue.split("-");// [Ayse,Cem,11,M,TM]
 
         String isimSoyisim = valueArr[0] + " " + valueArr[1];//Ayse Cem
 
@@ -51,6 +51,7 @@ public class MapDepo {
                     istenenKeyvalueArr[2] + "-" +
                     istenenKeyvalueArr[3] + "-" +
                     istenenKeyvalueArr[4];
+
             ogrenciMap.put(ogrenciKey, istenenKeyinYeniValesu);
         }
 
